@@ -1,0 +1,12 @@
+{
+  "brand_brief": "TRANSCRIPT ANALYSIS REQUEST: Please analyze this SUBFRACTURE brand development conversation for strategic insights and breakthrough opportunities. This is a raw, unfiltered brand strategy session transcript discussing our new design studio/brand intelligence agency. The conversation covers our brand purpose (creative destructionism), personality (human, cool, rock star), positioning (for brand operators), USP (starting with the end in mind), cultural positioning (emerging brands vs traditional), and core philosophy (keeping humans in the tech loop). Key themes include: creative strategy + design + technology integration, brand worlds creation, high-touch AI experiences, anti-slop positioning, heart-led technology, and the metaphor of surfing the AI wave. Extract strategic insights about brand positioning, market opportunities, competitive advantages, and actionable recommendations for launching this innovative brand intelligence agency.",
+  "operator_context": {
+    "role": "Brand Intelligence Strategist",
+    "industry": "Creative Technology", 
+    "company_stage": "Launch Phase",
+    "years_experience": 10,
+    "participant_id": "deep-analysis-test"
+  },
+  "target_outcome": "Comprehensive strategic analysis with detailed working shown for SUBFRACTURE methodology demonstration",
+  "deep_analysis": true
+}

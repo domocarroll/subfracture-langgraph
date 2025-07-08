@@ -1,0 +1,198 @@
+# SUBFRACTURE LangGraph Docker Compose
+# Complete development and production environment
+
+version: '3.8'
+
+services:
+  # Main SUBFRACTURE application
+  subfracture-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BUILD_DATE: ${BUILD_DATE:-now}
+        VERSION: ${VERSION:-1.0.0}
+        VCS_REF: ${VCS_REF:-latest}
+    image: subfracture-langgraph:latest
+    container_name: subfracture-app
+    ports:
+      - "8000:8000"
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - LANGSMITH_API_KEY=${LANGSMITH_API_KEY}
+      - LANGSMITH_PROJECT=${LANGSMITH_PROJECT:-subfracture-development}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - MAX_MEMORY_MB=${MAX_MEMORY_MB:-2048}
+      - REDIS_URL=redis://redis:6379/0
+      - POSTGRES_URL=postgresql://subfracture:subfracture@postgres:5432/subfracture
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./checkpoints:/app/checkpoints
+      - ./workshop_sessions:/app/workshop_sessions
+    depends_on:
+      - redis
+      - postgres
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - subfracture-network
+
+  # Redis for caching and session management
+  redis:
+    image: redis:7-alpine
+    container_name: subfracture-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - subfracture-network
+
+  # PostgreSQL for persistent data storage
+  postgres:
+    image: postgres:15-alpine
+    container_name: subfracture-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: subfracture
+      POSTGRES_USER: subfracture
+      POSTGRES_PASSWORD: subfracture
+      POSTGRES_INITDB_ARGS: "--auth-host=scram-sha-256"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U subfracture -d subfracture"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - subfracture-network
+
+  # Vector database for Cognee (optional)
+  weaviate:
+    image: semitechnologies/weaviate:1.22.4
+    container_name: subfracture-weaviate
+    ports:
+      - "8080:8080"
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+      DEFAULT_VECTORIZER_MODULE: 'none'
+      ENABLE_MODULES: 'text2vec-openai,text2vec-cohere,text2vec-huggingface,ref2vec-centroid,generative-openai,qna-openai'
+      CLUSTER_HOSTNAME: 'node1'
+    volumes:
+      - weaviate_data:/var/lib/weaviate
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/v1/.well-known/ready"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - subfracture-network
+
+  # Neo4j for knowledge graphs (optional)
+  neo4j:
+    image: neo4j:5-community
+    container_name: subfracture-neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      NEO4J_AUTH: neo4j/subfracture
+      NEO4J_PLUGINS: '["graph-data-science"]'
+      NEO4J_dbms_security_procedures_unrestricted: gds.*
+      NEO4J_dbms_memory_heap_initial_size: 512m
+      NEO4J_dbms_memory_heap_max_size: 1G
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "cypher-shell", "-u", "neo4j", "-p", "subfracture", "RETURN 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - subfracture-network
+
+  # Monitoring with Prometheus (optional)
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: subfracture-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=200h'
+      - '--web.enable-lifecycle'
+    restart: unless-stopped
+    networks:
+      - subfracture-network
+
+  # Grafana for visualization (optional)
+  grafana:
+    image: grafana/grafana:latest
+    container_name: subfracture-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: subfracture
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ./monitoring/grafana/datasources:/etc/grafana/provisioning/datasources:ro
+    restart: unless-stopped
+    depends_on:
+      - prometheus
+    networks:
+      - subfracture-network
+
+# Named volumes for data persistence
+volumes:
+  redis_data:
+    driver: local
+  postgres_data:
+    driver: local
+  weaviate_data:
+    driver: local
+  neo4j_data:
+    driver: local
+  neo4j_logs:
+    driver: local
+  prometheus_data:
+    driver: local
+  grafana_data:
+    driver: local
+
+# Custom network
+networks:
+  subfracture-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

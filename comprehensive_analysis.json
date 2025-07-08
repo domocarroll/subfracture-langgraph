@@ -1,0 +1,534 @@
+{
+  "content_analysis": {
+    "total_characters": 84057,
+    "total_words": 16402,
+    "total_sentences": 60,
+    "total_paragraphs": 3,
+    "questions_asked": 5,
+    "speaker_references": 58,
+    "temporal_references": 268,
+    "avg_sentence_length": 273.3666666666667,
+    "conversation_density": 1.6666666666666667
+  },
+  "theme_analysis": {
+    "theme_scores": {
+      "human_centered": 1.0,
+      "technology_integration": 1.0,
+      "creative_methodology": 1.0,
+      "brand_positioning": 1.0,
+      "market_disruption": 1.0,
+      "business_strategy": 1.0
+    },
+    "theme_details": {
+      "human_centered": {
+        "primary_matches": [
+          [
+            "human",
+            39
+          ],
+          [
+            "heart",
+            18
+          ],
+          [
+            "intuition",
+            7
+          ],
+          [
+            "personal",
+            11
+          ],
+          [
+            "authentic",
+            1
+          ],
+          [
+            "soul",
+            3
+          ],
+          [
+            "emotion",
+            3
+          ]
+        ],
+        "secondary_matches": [
+          [
+            "feel",
+            13
+          ],
+          [
+            "experience",
+            11
+          ],
+          [
+            "touch",
+            15
+          ],
+          [
+            "relationship",
+            1
+          ]
+        ],
+        "weighted_score": 17.0122654865151,
+        "normalized_score": 1.0
+      },
+      "technology_integration": {
+        "primary_matches": [
+          [
+            "AI",
+            27
+          ],
+          [
+            "technology",
+            31
+          ],
+          [
+            "tech",
+            10
+          ],
+          [
+            "cyborg",
+            7
+          ],
+          [
+            "machine",
+            7
+          ]
+        ],
+        "secondary_matches": [
+          [
+            "intelligence",
+            8
+          ],
+          [
+            "smart",
+            8
+          ],
+          [
+            "system",
+            9
+          ]
+        ],
+        "weighted_score": 14.168956779328315,
+        "normalized_score": 1.0
+      },
+      "creative_methodology": {
+        "primary_matches": [
+          [
+            "creative",
+            23
+          ],
+          [
+            "design",
+            17
+          ],
+          [
+            "strategy",
+            16
+          ],
+          [
+            "methodology",
+            1
+          ],
+          [
+            "framework",
+            5
+          ],
+          [
+            "process",
+            7
+          ]
+        ],
+        "secondary_matches": [
+          [
+            "approach",
+            7
+          ],
+          [
+            "technique",
+            1
+          ]
+        ],
+        "weighted_score": 10.326326183423152,
+        "normalized_score": 1.0
+      },
+      "brand_positioning": {
+        "primary_matches": [
+          [
+            "brand",
+            91
+          ],
+          [
+            "positioning",
+            8
+          ],
+          [
+            "personality",
+            7
+          ],
+          [
+            "voice",
+            1
+          ],
+          [
+            "essence",
+            2
+          ]
+        ],
+        "secondary_matches": [
+          [
+            "message",
+            1
+          ],
+          [
+            "story",
+            16
+          ],
+          [
+            "narrative",
+            2
+          ]
+        ],
+        "weighted_score": 19.28453311443425,
+        "normalized_score": 1.0
+      },
+      "market_disruption": {
+        "primary_matches": [
+          [
+            "disruption",
+            1
+          ],
+          [
+            "different",
+            12
+          ],
+          [
+            "unique",
+            7
+          ],
+          [
+            "breakthrough",
+            1
+          ]
+        ],
+        "secondary_matches": [
+          [
+            "new",
+            24
+          ]
+        ],
+        "weighted_score": 4.675398836503801,
+        "normalized_score": 1.0
+      },
+      "business_strategy": {
+        "primary_matches": [
+          [
+            "business",
+            17
+          ],
+          [
+            "strategy",
+            16
+          ],
+          [
+            "market",
+            4
+          ],
+          [
+            "competitive",
+            2
+          ]
+        ],
+        "secondary_matches": [
+          [
+            "opportunity",
+            2
+          ],
+          [
+            "scaling",
+            1
+          ],
+          [
+            "revenue",
+            1
+          ]
+        ],
+        "weighted_score": 5.341613428982715,
+        "normalized_score": 1.0
+      }
+    },
+    "dominant_themes": [
+      [
+        "human_centered",
+        1.0
+      ],
+      [
+        "technology_integration",
+        1.0
+      ],
+      [
+        "creative_methodology",
+        1.0
+      ]
+    ]
+  },
+  "key_phrases": {
+    "brand_specific": {
+      "brand operator": 3,
+      "brand intelligence": 3,
+      "creative destructionism": 2,
+      "humans in the tech loop": 2,
+      "brand worlds": 6,
+      "heart knows": 4,
+      "anti-slop": 2
+    },
+    "strategic": {
+      "positioning": 8,
+      "unique selling proposition": 1
+    },
+    "methodology": {
+      "methodology": 1,
+      "framework": 5,
+      "approach": 7,
+      "process": 7,
+      "system": 9
+    }
+  },
+  "sentiment_analysis": {
+    "sentiment_counts": {
+      "positive": 71,
+      "negative": 14,
+      "confident": 11,
+      "uncertain": 31,
+      "high_energy": 51,
+      "casual": 1195
+    },
+    "sentiment_ratio": 0.8352941176470589,
+    "confidence_ratio": 0.2619047619047619,
+    "overall_tone": "professional"
+  },
+  "strategic_frameworks": {
+    "Jobs to be Done": {
+      "total_mentions": 3,
+      "keywords_found": [
+        [
+          "hire",
+          1
+        ],
+        [
+          "progress",
+          2
+        ]
+      ]
+    },
+    "Growth Hacking": {
+      "total_mentions": 1,
+      "keywords_found": [
+        [
+          "viral",
+          1
+        ]
+      ]
+    },
+    "Brand Strategy": {
+      "total_mentions": 1,
+      "keywords_found": [
+        [
+          "brand positioning",
+          1
+        ]
+      ]
+    },
+    "SUBFRACTURE Methods": {
+      "total_mentions": 2,
+      "keywords_found": [
+        [
+          "creative destructionism",
+          2
+        ]
+      ]
+    }
+  },
+  "competitive_intelligence": {
+    "mentioned_companies": [
+      "Please analyze this SUBFRACTURE",
+      "unfiltered brand strategy session transcript discussing our new design",
+      "brand intelligence",
+      "The conversation covers our",
+      "for",
+      "Extract strategic insights about",
+      "and actionable recommendations for launching this innovative brand intelligence",
+      "So like the first thing obviously",
+      "fracture is the",
+      "re talking about our",
+      "So the first sort of thing is like you know describe your",
+      "Well design",
+      "poor thinking flash innovative design",
+      "Yeah so our",
+      "design",
+      "My answer would be brand intelligent agency building",
+      "Yeah brand intelligence",
+      "like the word",
+      "We like the word",
+      "your",
+      "new",
+      "new",
+      "just start in point right what my",
+      "person and the",
+      "positioning statement the four only because so my",
+      "our",
+      "re going to go down the brand pathway or is it any",
+      "re operating",
+      "want to brand operators",
+      "ve been using is like IP or",
+      "snoopy brand as well okay only my",
+      "their unique selling position right is KFC is finger lick and good right nobody else could say that about the",
+      "read Roosterwood struggle to say that about their",
+      "say that no other brands are building living breathing interactive",
+      "unique yeah yeah the",
+      "did still let off columns design",
+      "talking about brand worlds yeah yeah but then so that like can we say only we do",
+      "forget supports finger lick and grip because you can lick those spices off fingers so the because has to be proof that supports the usp so for brand operators only my",
+      "was not but what the",
+      "re talking about like building immersive worlds as part of the same conversation or what our",
+      "want this brand represented all this",
+      "was only that was what can be building building",
+      "mean like only one guy is interested in having the discovery center session um only my",
+      "like for brand operators only my",
+      "really like it will actually give you good sort of good sort of advice as well um something about something about like did we tailor personalized",
+      "this have you over um again so the next questions about campaign strategy right so every",
+      "ve heard of that",
+      "consider buying that",
+      "already buying you buying you more often or buying more or like you know so so those sort of things so like what what what what is our",
+      "get our",
+      "just an up or meeting so presenting our",
+      "re not just like straight out we want to have meetings and",
+      "ve got to overcome to get these meetings and presentations in the diary um but the confidence in the person that they want to have the meeting with us the belief that the um been taking the meetings and we worth their worth their time so there are to have some",
+      "already got an",
+      "ll kind of fit in no or like us kind of fought us uh oh like got an",
+      "re going to cross that one out now um or do we want to be an",
+      "specialized",
+      "like say you would spend five dollars worth of token costs to have an automated system that would like research the",
+      "fracture the guys at early",
+      "message you have to write it you know whatever that first touches with the",
+      "want it to represent the",
+      "would want to look at like introducing this",
+      "re still logo on my",
+      "brand book for my skincare",
+      "fucking brand these days and say yeah yeah and fall",
+      "re the",
+      "two million dollar account right great brand new",
+      "great",
+      "ve done from day one with the Sprite",
+      "the biggest",
+      "brand like the Sprite",
+      "hundred percent the risk taking off shoot of our cola",
+      "ve been coming but then you and the only",
+      "fashion",
+      "was see like crystal skin care brand is not going to set the world on people are gonna like you did this skin care",
+      "been paid to these salaries and then whatever our sourcing for free lenses are whatever overheads of running the",
+      "grand that was the",
+      "like guys come on look at the ad that you know my",
+      "the truth about our",
+      "an interesting combination from",
+      "our North Pole and then we go into each of the layers so what is our North Pole in what sense so well what is it mind blowing personalized brand experiences brand worlds brand worlds yeah okay",
+      "re talking about",
+      "re on what your company interfaces with the Nelly",
+      "traditional advertising",
+      "re talking about",
+      "re talking about is that that essence yeah yeah is really what we want to kind of capture in in our work yeah being out of figure out how to yeah so you want to agree with me for the benefit of our",
+      "agree with is right now is what is important to the",
+      "do it myself like how",
+      "like is this talking about like our",
+      "tech",
+      "creative",
+      "tech",
+      "really know what kind of",
+      "just wrap up the creative brief so the idea to bring our",
+      "lot of things has been and then how the idea works at different layers of your",
+      "is",
+      "and design",
+      "building brand ecosystems",
+      "is anything",
+      "because it",
+      "and attract clients",
+      "model and attract clients",
+      "but everyone",
+      "does is it kind of pulls that conversation back into focus so it",
+      "so it",
+      "already in place or feel like they don",
+      "thinking that they don",
+      "right cool so that",
+      "killer",
+      "have not even seen this presentation they briefed me",
+      "to people for the for the first time yeah yeah we create that moment where they go oh that",
+      "my whole thing is like don",
+      "massive account like instantly yeah it was just to do with the fact that they had like cool people in the room yeah but",
+      "that literally was like set up trading like",
+      "and they do great things and one thing they",
+      "like you guys that are like small and nimble and are thinking about all different elements would be able to deliver on and in",
+      "is yeah",
+      "fees so",
+      "that like that",
+      "right and so this is where you",
+      "interfaces with the Nelly company and it just kind of clicks and usually that",
+      "up until recently has been like we we work on behalf we represent your consumer you know they like so like we don",
+      "went through it and they all the guys at hyper island was like that guy special because of the way that like",
+      "culture is this talking how we fit into the culture we",
+      "or are we",
+      "that",
+      "it was building so it",
+      "Kennedy",
+      "Kennedy",
+      "Kennedy"
+    ],
+    "competitive_positioning": {
+      "differentiation": 20,
+      "superiority": 10,
+      "innovation": 60,
+      "challenges": 14
+    },
+    "differentiation_focus": true
+  },
+  "market_opportunities": {
+    "opportunity_signals": {
+      "market_gaps": 64,
+      "market_size": 22,
+      "timing_signals": 40
+    },
+    "industry_mentions": {
+      "advertising": 10,
+      "marketing": 8,
+      "branding": 3,
+      "design": 17,
+      "technology": 31,
+      "AI": 27
+    },
+    "market_readiness": true
+  },
+  "brand_architecture": {
+    "architecture_strength": {
+      "purpose": 22,
+      "vision": 2,
+      "values": 3,
+      "personality": 8,
+      "positioning": 14,
+      "promise": 6
+    },
+    "completeness_score": 1.0,
+    "strongest_elements": [
+      [
+        "purpose",
+        22
+      ],
+      [
+        "positioning",
+        14
+      ],
+      [
+        "personality",
+        8
+      ]
+    ]
+  }
+}

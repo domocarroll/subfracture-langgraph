@@ -1,0 +1,276 @@
+{
+  "session_id": "b756f7e3-a71b-489b-90a3-f5de0d4ebbf0",
+  "status": "completed",
+  "execution_time": "2025-07-08T14:36:22.525555",
+  "analysis_mode": "deep",
+  "brand_brief_length": 950,
+  "target_outcome": "Comprehensive strategic analysis with detailed working shown for SUBFRACTURE methodology demonstration",
+  "analysis": {
+    "gravity_index": 0.5049999999999999,
+    "content_analysis": {
+      "total_characters": 950,
+      "total_words": 119,
+      "total_sentences": 5,
+      "total_paragraphs": 1,
+      "questions_asked": 0,
+      "avg_sentence_length": 23.8,
+      "conversation_density": 0.0
+    },
+    "theme_analysis": {
+      "theme_scores": {
+        "human_centered": 1.0,
+        "technology_integration": 1.0,
+        "creative_methodology": 1.0,
+        "brand_positioning": 1.0,
+        "market_disruption": 1.0,
+        "business_strategy": 1.0
+      },
+      "theme_details": {
+        "human_centered": {
+          "matches": [
+            [
+              "human",
+              1
+            ],
+            [
+              "heart",
+              1
+            ]
+          ],
+          "raw_score": 21.052631578947366,
+          "normalized_score": 1.0
+        },
+        "technology_integration": {
+          "matches": [
+            [
+              "AI",
+              2
+            ],
+            [
+              "technology",
+              2
+            ],
+            [
+              "tech",
+              1
+            ]
+          ],
+          "raw_score": 52.63157894736842,
+          "normalized_score": 1.0
+        },
+        "creative_methodology": {
+          "matches": [
+            [
+              "creative",
+              2
+            ],
+            [
+              "design",
+              2
+            ],
+            [
+              "strategy",
+              2
+            ]
+          ],
+          "raw_score": 63.1578947368421,
+          "normalized_score": 1.0
+        },
+        "brand_positioning": {
+          "matches": [
+            [
+              "brand",
+              8
+            ],
+            [
+              "positioning",
+              4
+            ],
+            [
+              "personality",
+              1
+            ]
+          ],
+          "raw_score": 136.8421052631579,
+          "normalized_score": 1.0
+        },
+        "market_disruption": {
+          "matches": [
+            [
+              "breakthrough",
+              1
+            ]
+          ],
+          "raw_score": 10.526315789473683,
+          "normalized_score": 1.0
+        },
+        "business_strategy": {
+          "matches": [
+            [
+              "strategy",
+              2
+            ],
+            [
+              "market",
+              1
+            ],
+            [
+              "competitive",
+              1
+            ]
+          ],
+          "raw_score": 42.10526315789473,
+          "normalized_score": 1.0
+        }
+      },
+      "coherence_score": 1.0,
+      "dominant_themes": [
+        [
+          "human_centered",
+          1.0
+        ],
+        [
+          "technology_integration",
+          1.0
+        ],
+        [
+          "creative_methodology",
+          1.0
+        ]
+      ]
+    },
+    "key_phrases": {
+      "brand_specific": {
+        "brand intelligence": 2,
+        "creative destructionism": 1,
+        "humans in the tech loop": 1,
+        "brand worlds": 1,
+        "anti-slop": 1
+      },
+      "strategic": {
+        "positioning": 4
+      }
+    },
+    "sentiment_analysis": {
+      "sentiment_counts": {
+        "positive": 1,
+        "negative": 0,
+        "confident": 0,
+        "uncertain": 0,
+        "high_energy": 0
+      },
+      "sentiment_ratio": 1.0,
+      "confidence_ratio": 0.0,
+      "energy_level": 0,
+      "overall_tone": "professional"
+    },
+    "strategic_frameworks": {
+      "Brand Strategy": {
+        "total_mentions": 1,
+        "keywords_found": [
+          [
+            "brand positioning",
+            1
+          ]
+        ]
+      },
+      "SUBFRACTURE Methods": {
+        "total_mentions": 1,
+        "keywords_found": [
+          [
+            "creative destructionism",
+            1
+          ]
+        ]
+      }
+    },
+    "competitive_intelligence": {
+      "mentioned_companies": [
+        "design",
+        "intelligence",
+        "intelligence"
+      ],
+      "competitive_positioning": {
+        "differentiation": 0,
+        "superiority": 0,
+        "innovation": 3
+      },
+      "differentiation_focus": false,
+      "readiness_score": 0.15
+    },
+    "market_opportunities": {
+      "opportunity_signals": {
+        "market_gaps": 0,
+        "timing_signals": 1
+      },
+      "timing_score": 0.05,
+      "market_readiness": false
+    },
+    "brand_architecture": {
+      "architecture_strength": {
+        "purpose": 1,
+        "vision": 0,
+        "values": 0,
+        "personality": 1,
+        "positioning": 4,
+        "promise": 0
+      },
+      "completeness_score": 0.5,
+      "strongest_elements": [
+        [
+          "positioning",
+          4
+        ],
+        [
+          "purpose",
+          1
+        ],
+        [
+          "personality",
+          1
+        ]
+      ]
+    },
+    "strategic_positioning": {
+      "target_audience": "Forward-thinking technology brands",
+      "category": "Human-centered AI brand intelligence agency",
+      "positioning_statement": "For brand operators who want breakthrough positioning, only SUBFRACTURE keeps humans in the tech loop because we start with the end in mind",
+      "category_disruption": "Anti-slop, human-centered alternative to traditional agencies and AI tools"
+    },
+    "competitive_advantages": [
+      "Cross-disciplinary integration: Strategy + Creative + Design + Technology",
+      "Human-centered AI approach: Keeping humans in the tech loop",
+      "Proprietary methodology: Creative destructionism + vesica pisces",
+      "Living brand worlds: Interactive, breathing brand experiences",
+      "Strategic framework sophistication: 2 methodologies detected"
+    ],
+    "brand_personality": {
+      "core_traits": "Human, innovative, authentic",
+      "communication_style": "Direct, passionate, anti-corporate",
+      "brand_archetype": "The Rebel + The Magician",
+      "aspirational_identity": "Technology rock stars"
+    },
+    "recommendations": [
+      "Lead with human-centered AI positioning to differentiate from purely technical competitors",
+      "Develop comprehensive case studies demonstrating brand world creation methodology",
+      "Target emerging brands seeking authentic, non-corporate agency alternatives",
+      "Emphasize emotional intelligence and intuitive validation in all client interactions"
+    ]
+  },
+  "business_metrics": {
+    "market_readiness_score": 0.5049999999999999,
+    "differentiation_strength": 0.6049999999999999,
+    "brand_coherence": 1.0,
+    "launch_confidence": "Medium",
+    "estimated_market_impact": "$252k-403k potential",
+    "competitive_readiness": 0.15,
+    "framework_sophistication": 0.2
+  },
+  "deep_insights": {
+    "thematic_coherence": 1.0,
+    "strategic_sophistication": 2,
+    "market_timing_alignment": 0.05,
+    "competitive_awareness": 3,
+    "brand_architecture_completeness": 0.5
+  }
+}
