@@ -1,24 +1,29 @@
 #!/usr/bin/env python3
 """
-Minimal LangGraph test to isolate deployment issues
+Ultra-minimal LangGraph test for server startup debugging
 """
 
-from typing import TypedDict, Optional, Dict, Any
 from langgraph.graph import StateGraph, START, END
 
-class MinimalState(TypedDict):
-    input: str
-    output: Optional[str]
+def simple_node(state: dict) -> dict:
+    """Ultra-simple synchronous node"""
+    return {"output": f"Processed: {state.get('input', 'test')}"}
 
-async def simple_node(state: MinimalState) -> MinimalState:
-    """Simple test node"""
-    return {"output": f"Processed: {state['input']}"}
-
-# Create minimal workflow
-workflow = StateGraph(MinimalState)
+# Create ultra-minimal workflow with basic dict state
+workflow = StateGraph(dict)
 workflow.add_node("process", simple_node)
 workflow.add_edge(START, "process")
 workflow.add_edge("process", END)
 
 # Export for platform
-graph = workflow.compile()
+try:
+    graph = workflow.compile()
+    print("✅ Ultra-minimal graph compiled successfully")
+except Exception as e:
+    print(f"❌ Graph compilation failed: {e}")
+    # Fallback to simplest possible graph
+    fallback_workflow = StateGraph(dict)
+    fallback_workflow.add_node("simple", lambda state: {"result": "ok"})
+    fallback_workflow.add_edge(START, "simple")
+    fallback_workflow.add_edge("simple", END)
+    graph = fallback_workflow.compile()

@@ -1,3 +1,2 @@
-# Absolute minimal dependencies for platform build success
+# Ultra-minimal dependencies for server startup debugging
 langgraph
-langsmith
