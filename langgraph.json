@@ -1,7 +1,8 @@
 {
-  "dependencies": ["langgraph", "langsmith"],
+  "dependencies": ["."],
   "graphs": {
-    "minimal": "./minimal_test.py:graph"
+    "subfracture": "./demo_agent.py:graph"
   },
+  "env": ".env",
   "python_version": "3.11"
 }
