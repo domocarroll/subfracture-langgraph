@@ -773,6 +773,34 @@ async def test_demo_agent():
         return None
 
 
+# Create the LangGraph graph for platform deployment
+def create_graph():
+    """Create the LangGraph workflow"""
+    
+    workflow = StateGraph(dict)
+    
+    # Define the single analysis node
+    async def analysis_node(state: dict):
+        """Main analysis node"""
+        agent = SubfractureDemoAgent()
+        result = await agent.analyze_transcript(
+            brand_brief=state.get("brand_brief", ""),
+            operator_context=state.get("operator_context"),
+            target_outcome=state.get("target_outcome"),
+            deep_analysis=state.get("deep_analysis", False)
+        )
+        return result
+    
+    # Add node and edges
+    workflow.add_node("analysis", analysis_node)
+    workflow.add_edge(START, "analysis")
+    workflow.add_edge("analysis", END)
+    
+    return workflow.compile()
+
+# Create the graph instance for LangGraph Platform
+graph = create_graph()
+
 if __name__ == "__main__":
     # Run test when executed directly
     asyncio.run(test_demo_agent())
