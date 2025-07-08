@@ -1,5 +1,5 @@
 {
-  "dependencies": ["langgraph", "langsmith"],
+  "dependencies": [".", "langgraph", "langsmith"],
   "graphs": {
     "subfracture": "./minimal_test.py:graph"
   },
